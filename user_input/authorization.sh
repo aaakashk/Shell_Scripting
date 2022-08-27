@@ -1,11 +1,12 @@
 #!/bin/zsh
 
-read -p 'Username: ' username
-read -sp 'Password: ' password
-
-if ($username == "akashkumar" && $password == "nothing")
+read -p "Username: " username
+read -sp "Password: " password
+# if statement doesn't work with single [ ] brackets
+# [[ ]]; is required for it to work
+if [[ $username == akashkumar && $password == nothing ]];
 then
-    echo -e "\nLogged in"
+    echo -e "\nlogged in"
 else
-    echo -e "\nWrong info"
+    echo -e "\nwrong credentials"
 fi
